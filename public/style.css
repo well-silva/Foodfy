@@ -18,12 +18,14 @@ main{
 header{
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 32px 0;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header div img{
     margin-right: 122px;
+    background: rosybrown;
 }
 
 .links a{
@@ -69,27 +71,29 @@ header div img{
     gap: 20px;
 }
 
-.receita{
+/* .receita{
     cursor: pointer;
-}
+} */
 
 .image__receita img{
     border-radius: 15px;
     width: 100%;
 }
 
+.info_receita a,
 .info_receita h3{
     font-size: 18px;
-    line-height: 21px;
+    line-height: 16px;
     color: #111111;
     font-weight: normal;
     margin-top: 20px;
     margin-bottom: 5px;
+    text-decoration: none;
 }
 
 .info_receita p{
     font-size: 14px;
-    line-height: 16px;
+    line-height: 12px;
 }
 
 footer{
@@ -105,25 +109,25 @@ footer p{
 }
 
 /*========== Sobre ==========*/
-.sobre-content h1{
+.about h1{
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 20px;
 }
 
-.sobre-content p{
+.about p{
     font-size: 18px;
     line-height: 24px;
     margin: 20px 0 30px 0;
 }
 
-.sobre-content h2{
+.about h2{
     font-size: 20px;
     margin: 20px 0 30px 0;
 }
 
 /*========= modal =========*/
-.modal-overlay{
+/* .modal-overlay{
     background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
@@ -131,9 +135,9 @@ footer p{
     top: 0;
     opacity: 0;
     visibility: hidden;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .modal{
@@ -180,10 +184,74 @@ footer p{
     color:#777777;
     display: inline;
     margin-top: 5px;
-}
+} */
 
 /*======== modal active ========*/
-.modal-overlay.active{
+/* .modal-overlay.active{
     opacity: 1;
     visibility: visible;
+} */
+
+/* Recipe */
+
+.image-content img{
+    width: 100%;
+    border-radius: 15px;
+    height: 230px;
+}
+
+.info-recipe{
+    margin: 40px 0;
+}
+
+.info-recipe{
+    text-align: center;
+}
+
+.info-recipe h1{
+    font-size: 36px;
+}
+
+.info-recipe span{
+    font-size: 20px;
+    color: #777777;
+}
+
+.group{
+    display: flex;
+    align-items: baseline;
+    margin: 20px 0 39px 0;
+}
+
+.group button{
+    border: none;
+    background: none;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #999999;
+}
+
+.group button:focus{
+    outline: none;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li{
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+#infor-extra p{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.hidden{
+    display: block;
 }

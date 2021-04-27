@@ -1,0 +1,28 @@
+{% extends "./layout.njk" %}
+
+{% block head %}
+    <title>ifoodfy | Administração Receitas</title>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="title">
+            <h1>Gerenciar receitas</h1>
+        </div>
+
+        <div class="receitas">
+        {% for recipe in recipes %}
+           <div class="receita" id="{{ recipe.id }}">
+               <div class="image__receita">
+                   <img src="{{recipe.image_recipe}}" alt="">
+               </div>
+               <div class="info_receita">
+                   <h3>{{recipe.title}}</h3>
+                   <p>por {{recipe.author}}</p>
+                   <a href="/admin/recipes/{{ recipe.id }}">Visualizar</a>
+               </div>
+           </div>
+        {% endfor %}
+        </div>
+    </main>
+{% endblock %}

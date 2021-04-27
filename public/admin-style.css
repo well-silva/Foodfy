@@ -1,0 +1,196 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  background: black;
+  padding: 25px;
+}
+
+header div{
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-edit button:first-child{
+  background-color: #DC4747;
+}
+
+.title button, .title-edit button {
+  color: white;
+  background: #6558C3;
+  padding: 9px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.title h3{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card{
+  max-width: 940px;
+  margin: 55px auto;
+}
+
+.item{
+  margin: 30px 0;
+}
+
+.item div{
+  margin: 10px 0;
+}
+
+.item label:first-child{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item input,
+.item textarea{
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #DDDDDD;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.item input:focus,
+.item textarea:focus{
+  outline: none;
+}
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+.item button{
+  color: #6558C3;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* INDEX/SHOW */
+
+.title{
+  max-width: 940px;
+  margin: 30px auto;
+}
+
+.receitas {
+  max-width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.image__receita{
+  margin-right: 16px;
+}
+
+.image__receita img{
+  width: 172px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.receita {
+  display: flex;
+  align-items: center;
+}
+
+.info_receita h3{
+  font-size: 18px;
+  color: #111111;
+  font-weight: 500;
+}
+
+.info_receita p{
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.info_receita a{
+  font-size: 14px;
+  color: #6558C3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.title a{
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #6558C3;
+  color: white;
+  text-decoration: none;
+}
+
+.title h1{
+  font-size: 24px;
+}
+
+.recipe{
+  max-width: 940px;
+  margin: 30px auto;
+}
+
+.recipe .image-content img{
+  border-radius: 15px;
+}
+
+.content{
+  margin-top: 50px;
+}
+
+.content .info-recipe{
+  text-align: center;
+}
+
+.info-recipe span{
+  font-size: 20px;
+  color: #777777;
+}
+
+.group h2, .preparation h2, .infos h2{
+  font-size: 24px;
+  color: #111111;
+  margin: 19px 0;
+}
+
+ul li, 
+#infor-extra p{
+  list-style: none;
+  font-size: 18px;
+  color: #444444;
+  line-height: 24px;
+}
