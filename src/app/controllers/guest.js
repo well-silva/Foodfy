@@ -20,6 +20,7 @@ const controller = {
     Recipe.find(req.params.id, (recipe) => {
       if(!recipe) return res.send('Recipe not found')
 
+      console.log(recipe)
       return res.render("guest/show", {recipe})
     })
   },

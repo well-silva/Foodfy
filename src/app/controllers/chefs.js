@@ -24,10 +24,39 @@ const controller = {
     })
   },
   show: (req, res) => {
+
     Chef.find(req.params.id, (chef) => {
       if(!chef) return res.send('Chef not found')
 
-      return res.render("admin/chefs/show", { chef })
+      Chef.findRecipe(req.params.id, (recipes) => {
+        return res.render("admin/chefs/show", { chef, recipes })
+      })
+    })
+  },
+  edit: (req, res) => {
+    Chef.find(req.params.id, (chef) => {
+
+      return res.render("admin/chefs/edit", { chef } )
+    })
+  },
+  put: (req, res) => {
+
+    const keys = Object.keys(req.body)
+    for (key of keys) {
+      if (req.body[key] == ""){
+        res.send('Preencha todos os dados')
+      }
+    }
+
+    console.log(req.body)
+
+    Chef.update(req.body, () => {
+      return res.redirect(`/admin/chefs/${req.body.id}`)
+    })
+  },
+  delete: (req, res) => {
+    Chef.delete(req.body.id, (chef) => {
+      return res.redirect("/admin/chefs")
     })
   }
 }
