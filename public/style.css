@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
-body{
+html{
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }
 
 main{
     max-width: 940px;
+    width: 940px;
     margin: 0 auto;
-    position: relative;
     padding: 20px;
+    height: 100vh;
 }
 
 header{
@@ -25,7 +34,10 @@ header{
 
 header div img{
     margin-right: 122px;
-    background: rosybrown;
+}
+
+.links {
+    margin-right: 162px;
 }
 
 .links a{
@@ -40,7 +52,6 @@ header div img{
     grid-template-columns: 2fr 1fr;
     background-color: #FBDFDB;
     border-radius: 30px;
-    width: 100%;
     height: 366px;
 }
 
@@ -65,35 +76,48 @@ header div img{
     margin:50px 0 20px 0; 
 }
 
-.receitas{
+.card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    box-sizing: border-box;
+    max-width: 930px;
 }
 
-/* .receita{
-    cursor: pointer;
-} */
+.receitas{
+    width: 100%;
+}
 
 .image__receita img{
     border-radius: 15px;
     width: 100%;
+    height: 140px;
+}
+
+.info_receita {
+    margin-top: 20px;
+}
+
+.info_receita p:first-child {
+    font-size: 18px;
+    color: #111111;
 }
 
 .info_receita a,
 .info_receita h3{
     font-size: 18px;
-    line-height: 16px;
+    line-height: 24px;
     color: #111111;
     font-weight: normal;
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 5px;
     text-decoration: none;
+    display: block;
 }
 
 .info_receita p{
     font-size: 14px;
-    line-height: 12px;
+    line-height: 24px;
 }
 
 footer{
@@ -126,78 +150,23 @@ footer p{
     margin: 20px 0 30px 0;
 }
 
-/*========= modal =========*/
-/* .modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal{
-    width: 660px;
-    height: 413px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 25vh auto;
-    text-align: center;
-}
-
-.modal img{
-    width: 600px;
-    height: 200px;
-    border-radius: 15px;
-}
-
-.modal-info h1{
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-weight: normal;
-}
-
-.modal a{
-    font-size: 16px;
-    color: #999999;
-    cursor: pointer;
-}
-
-.modal-info{
-    margin-bottom: 60px;
-}
-
-.modal-info h3{
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: normal;
-}
-
-.modal-info p{
-    font-size: 18px;
-    color:#777777;
-    display: inline;
-    margin-top: 5px;
-} */
-
-/*======== modal active ========*/
-/* .modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-} */
-
 /* Recipe */
 
 .image-content img{
     width: 100%;
     border-radius: 15px;
-    height: 230px;
+    height: 140px;
+}
+
+.recipe_image__container {
+    width: 940px;
+    height: 280px;
+}
+
+.recipe_image__container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .info-recipe{
@@ -254,4 +223,57 @@ ul li{
 
 .hidden{
     display: block;
+}
+
+/*SEACH*/
+.seach input {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    font-size: 16px;
+    outline: none;
+}
+
+.seach button {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    background: #6558C3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*CHEFS*/
+
+.card_chefs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.chef{
+    display: flex;
+    align-items: center;
+}
+.image_chef {
+    margin-right: 16px;
+}
+
+.image_chef img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.info_chef p:first-child{
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 4px;
+}
+
+.info_chef p:last-child {
+    font-size: 14px;
+    color: #666666;
 }

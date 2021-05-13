@@ -1,0 +1,38 @@
+{% extends "../layout.njk" %}
+
+{% block content %}
+<main>
+  <div class="chef">
+    <div class="title">
+      <h1>Chef: {{ recipe.name }}</h1>
+      <a href="/admin/chef/{{ chef.id }}/edit">Editar Chef</a>
+    </div>
+
+
+    <div class="image-content-chef">
+      <img src="{{ chef.image }}" alt="">
+    </div>
+
+    <div class="info-chef">
+      <h1>{{ recipe.name }}</h1>
+      <span> {{ recipe.total_recipes }} receitas</span>
+    </div>
+
+    <div class="recipes_chef">
+      <h2>Receitas</h2>
+      <div class="card_recipes">
+        <div class="card-recipe">
+          <div class="content_image_recipe">
+            <img src="" alt="">
+          </div>
+          <div class="content_info">
+            <p>{{ recipe.name }}</p>
+            <p>por {{ chef.name}}</p>
+            <a href="admin/recipe/{{ recipe.id }}">Visualizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

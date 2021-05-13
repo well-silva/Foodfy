@@ -20,15 +20,15 @@
             <h2>Mais acessadas</h2>
         </div>
 
-        <div class="receitas">
+        <div class="card">
         {% for recipe in recipes %}
            <div class="receita">
                <div class="image__receita">
-                   <img src="{{recipe.image_recipe}}" alt="">
+                   <img src="{{recipe.image}}" alt="">
                </div>
                <div class="info_receita">
-                   <h3>{{recipe.title}}</h3>
-                   <p>por {{recipe.author}}</p>
+                   <p>{{recipe.title}}</p>
+                   <p>por {{recipe.name}}</p>
                </div>
            </div>
         {% endfor %}

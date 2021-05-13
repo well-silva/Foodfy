@@ -6,16 +6,16 @@
 
 {% block content %}
     <main>
-        <div class="receitas">
+        <div class="card">
             {% for recipe in recipes %}
                 <div class="receita" id="{{ recipe.id }}">
                     <div class="image__receita">
-                        <img src="{{ recipe.image_recipe }}" alt="">
+                        <img src="{{ recipe.image }}" alt="">
                     </div>
-                        <div class="info_receita">
-                            <a href="/recipes/{{ recipe.id }}">{{ recipe.title }}</a>
-                            <p>por {{ recipe.author }}</p>
-                        </div>
+                    <div class="info_receita">
+                        <a href="/recipes/{{ recipe.id }}">{{ recipe.title }}</a>
+                        <p>por {{ recipe.name }}</p>
+                    </div>
                 </div>
             {% endfor %}
         </div>

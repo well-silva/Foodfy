@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",
-    "nodemon": "nodemon app.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, views'"
+    "nodemon": "nodemon src/app.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/app/views'"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "nodemon": "^2.0.7",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",
