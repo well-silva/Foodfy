@@ -14,19 +14,15 @@
 <body>
     <header>
         <div>
-            <a href="/"><img src="assets/logo.png" alt=""></a>
+            <a href="/"><img src="/assets/logo.png" alt=""></a>
         </div>
         <div class="links">
             <a href="/about">Sobre</a>
             <a href="/recipes">Receitas</a>
             <a href="/chefs">Chefs</a>
         </div>
-        <div class="seach">
-            <input 
-                type="text"
-                placeholder="Buscar uma receita">
-            <button type="submit">Buscar</button>
-        </div>
+
+        {% block filter %}{% endblock %}
     </header>
 
     {% block content%}

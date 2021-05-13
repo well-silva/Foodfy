@@ -6,6 +6,7 @@
 
 html,body{
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 main{
@@ -13,6 +14,7 @@ main{
     width: 940px;
     margin: 0 auto;
     padding: 20px;
+    min-height: 100%;
 }
 
 header{
@@ -73,6 +75,7 @@ header div img{
     gap: 20px;
     box-sizing: border-box;
     max-width: 930px;
+    margin-top: 30px;
 }
 
 .receitas{
@@ -143,6 +146,10 @@ footer p{
 
 /* Recipe */
 
+.recipe {
+    max-width: 900px;
+}
+
 .image-content img{
     width: 100%;
     border-radius: 15px;
@@ -150,7 +157,7 @@ footer p{
 }
 
 .recipe_image__container {
-    width: 940px;
+    width: 900px;
     height: 280px;
 }
 

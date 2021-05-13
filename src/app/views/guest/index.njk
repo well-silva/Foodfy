@@ -4,6 +4,20 @@
     <title>Foodfy | Home</title>
 {% endblock %}
 
+{% block filter %}
+    <div class="seach">
+            <form action="/seach" method="GET">
+                <input 
+                    type="text"
+                    name="filter"
+                    placeholder="Buscar uma receita"
+                >
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+{% endblock %}
+
+
 {% block content %}
     <main>
         <div class="container-banner">

@@ -30,7 +30,15 @@ const controller = {
     })
   },
   seach: (req, res) => {
-    return res.render("guest/seach")
+    let { filter } = req.query
+    if(!filter) {
+      console.log(filter)
+      return res.send('Recipe not found')
+    } else {
+      Recipe.findBy(filter, (recipes) => {
+        return res.render("guest/seach", { recipes, filter})
+      })
+    }
   }
 }
 
