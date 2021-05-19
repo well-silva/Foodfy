@@ -106,7 +106,7 @@ textarea {
   font-family: 'Roboto', sans-serif;
 }
 
-.item button{
+.item button, .button{
   color: #6558C3;
   font-weight: bold;
   background: none;
@@ -140,7 +140,7 @@ textarea {
   border-radius: 8px;
   width: 100%;
   height: 100%;
-  
+  object-fit: cover;
 }
 
 .receita {
@@ -188,6 +188,7 @@ textarea {
   border-radius: 15px;
   width: 940px;
   height: 280px;
+  object-fit: cover;
 }
 
 .content{
@@ -240,6 +241,7 @@ ul li,
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .info_chef p:first-child{
@@ -261,6 +263,7 @@ ul li,
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  object-fit: cover;
 }
 
 .info-chef {
@@ -299,6 +302,7 @@ ul li,
   width: 100%;
   height: 100%;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .content_info p:first-child {
