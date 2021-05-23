@@ -7,8 +7,6 @@ const controller = {
 
     const recipes = results.rows
 
-    console.log(recipes)
-
     return res.render("admin/recipes/index", { recipes })
   },
   async create(req, res) {

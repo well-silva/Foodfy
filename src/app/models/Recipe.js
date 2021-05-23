@@ -11,7 +11,6 @@ module.exports = {
     `
 
     return db.query(query);
-
   },
   create(data) {
 
@@ -42,7 +41,7 @@ module.exports = {
   find(id) {
 
     return db.query(`SELECT recipes.*, chefs.name
-    FROM recipes 
+    FROM recipes
     LEFT JOIN chefs ON (recipes.chef_id = chefs.id)
     WHERE recipes.id = $1`, [id])
   },

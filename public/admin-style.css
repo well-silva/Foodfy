@@ -76,16 +76,14 @@ header .container{
   margin: 30px 0;
 }
 
-.item div{
-  margin: 10px 0;
-}
+
 
 .item label:first-child{
   font-size: 16px;
   font-weight: bold;
 }
 
-.item input,
+.item input[type="text"],
 .item textarea,
 .item select{
   width: 100%;
@@ -322,4 +320,87 @@ ul li,
   text-decoration: none;
   color: #6558C3;
   font-weight: bold;
+}
+.item .photos-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;  
+  width: 100%;
+}
+
+.item div {
+  margin-top: 10px;
+}
+
+ .item #photos-upload {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.item #photos-upload i {
+  font-size: 50px;
+  color: #777777;
+}
+
+.item #photos-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.item #photos-preview {
+  display:  flex;
+  flex-wrap: wrap;
+}
+
+.item #photos-preview .photo {
+  display: inline-block;
+}
+
+.item #photos-preview .photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-right: 4px;
+  object-fit: cover;
+} 
+
+#photos-preview .photo {
+  position: relative;
+}
+
+#photos-preview .photo i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: opacity 200ms;
+  opacity: 0;
+}
+
+#photos-preview .photo:hover i {
+  opacity: 1;
 }
